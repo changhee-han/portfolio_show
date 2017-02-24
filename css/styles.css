@@ -1,0 +1,49 @@
+@import url('reset.css');
+
+html{
+  font-size: 10px;
+}
+
+h1{
+  font-size: 3rem;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+h3{
+  font-size: 1.5rem;
+}
+
+h1,h2{margin-bottom: 20px;}
+
+  span.hide{display: none;}
+
+    nav ul{
+      display: flex;
+      justify-content: flex-end;
+    }
+
+      nav ul li{
+        margin: 5px;
+      }
+
+        nav ul li a{
+          font-size: 1.5rem;
+        }
+
+  header{
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+    h1#logo{
+      background-image: url("http://placehold.it/200x200");
+      width:200px;
+      height: 200px;
+      margin: 0 auto;
+    }
