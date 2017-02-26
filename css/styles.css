@@ -1,19 +1,23 @@
 @import url('reset.css');
 
-html{
-  font-size: 10px;
+*{box-sizing: border-box;}
+html{font-size: 10px;}
+
+body{
+  font-size: 1.6rem;
+  line-height: normal;
 }
 
 h1{
-  font-size: 3rem;
+  font-size: 4.2rem;
 }
 
 h2{
-  font-size: 2rem;
+  font-size: 2.6rem;
 }
 
 h3{
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 h1,h2{margin-bottom: 20px;}
@@ -23,14 +27,20 @@ h1,h2{margin-bottom: 20px;}
     nav ul{
       display: flex;
       justify-content: flex-end;
+      border: 1px solid;
     }
 
       nav ul li{
-        margin: 5px;
+        margin: 50px 40px 20px;
+      }
+
+      nav ul li:last-child{
+        margin-right: 70px;
       }
 
         nav ul li a{
-          font-size: 1.5rem;
+          text-decoration: none;
+          color: black;
         }
 
   header{
@@ -46,4 +56,22 @@ h1,h2{margin-bottom: 20px;}
       width:200px;
       height: 200px;
       margin: 0 auto;
+    }
+
+    #about{
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    .videos{
+      border: 1px solid;
+    }
+
+    p{
+      width: 80%;
+      margin: 0 auto 20px;
+    }
+
+    #grads{
+      text-align: center;
     }
