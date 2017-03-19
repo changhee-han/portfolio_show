@@ -55,6 +55,47 @@
         <h1>The Final Draft</h1>
         <!-- <img src="" id="logo"> -->
     </header>
+    <?php
+
+    include('db_connect.php');
+
+    if(isset($_POST["submit"]))
+    {
+
+
+      $firstname = str_replace("'","\'",$_POST["student_first_name"]);
+      $lastname = str_replace("'","\'",$_POST["student_last_name"]);
+      $websiteUrl = $_POST["student_website"];
+      // $isDesinger = $_POST["student_designer"];
+      $studentTitle = str_replace("'","\'",$_POST["student_title"]);
+      $studentStatement = str_replace("'","\'",$_POST["student_quote"]);
+      $studentBio = str_replace("'","\'",$_POST["student_bio"]);
+
+        //if statments for the groups
+        if( isset($_POST['student_designer']) ) $isDesinger = 1;
+        if( isset($_POST['student_developer']) ) $isDeveloper = 1;
+        if( isset($_POST['student_media']) ) $isMedia = 1;
+
+        $mysql = get_connection();
+        $result = mysql_query("USE ".DB_NAME) or DIE(mysql_error());
+
+        $query = "INSERT INTO student_bio (firstname, lastname, website_url, isDesinger, isDeveloper, isMedia, title, statement, bio) VALUES ('".$firstname."', '".$lastname."', '".utf8_encode($websiteUrl)."', '".$isDesinger."', '".$isDeveloper."', '".$isMedia."', '".$studentTitle."', '".$studentStatement."', '".$studentBio."')";
+
+        $result = mysql_query($query) or DIE(mysql_error());
+
+
+        if($result){
+
+            echo "<h2>Your information saved to database!</h2>";
+        } else {
+            echo "<h2>Sorry, there is something wrong. Contact Dev team!</h2>";
+        }
+
+        mysql_close($mysql);
+
+    }
+
+    ?>
     <form onSubmit="return validateForm();" method="POST" action="bio_form.php"name="student_bio_form" id="student_bio_form">
         <fieldset>
             <legend>Student Bios</legend>
@@ -98,46 +139,3 @@
   </div> <!-- End bio-wrapper -->
 </body>
 </html>
-
-
-<?php
-
-include('db_connect.php');
-
-if(isset($_POST["submit"]))
-{
-
-
-    $firstname = $_POST["student_first_name"];
-    $lastname = $_POST["student_last_name"];
-    $websiteUrl = $_POST["student_website"];
-    // $isDesinger = $_POST["student_designer"];
-    $studentTitle = $_POST["student_title"];
-    $studentStatement = $_POST["student_quote"];
-    $studentBio = $_POST["student_bio"];
-
-    //if statments for the groups
-    if( isset($_POST['student_designer']) ) $isDesinger = 1;
-    if( isset($_POST['student_developer']) ) $isDeveloper = 1;
-    if( isset($_POST['student_media']) ) $isMedia = 1;
-
-    $mysql = get_connection();
-    $result = mysql_query("USE ".DB_NAME) or DIE(mysql_error());
-
-    $query = "INSERT INTO student_bio (firstname, lastname, website_url, isDesinger, isDeveloper, isMedia, title, statement, bio) VALUES ('".$firstname."', '".$lastname."', '".utf8_encode($websiteUrl)."', '".$isDesinger."', '".$isDeveloper."', '".$isMedia."', '".$studentTitle."', '".$studentStatement."', '".$studentBio."')";
-
-    $result = mysql_query($query) or DIE(mysql_error());
-
-
-    if($result){
-
-        echo "<h2>Your information saved to database!</h2>";
-    } else {
-        echo "<h2>Sorry, there is something wrong. Contact Dev team!</h2>";
-    }
-
-    mysql_close($mysql);
-
-}
-
-?>
