@@ -10,6 +10,10 @@
   <body>
     <nav>
       <ul>
+        <li><h1 id="logo"><span class="hide">logo</span></h1></li>
+        <li><h1 class="all-caps">The Final Draft</h1></li>
+      </ul>
+      <ul id="nav-links">
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Grads</a></li>
@@ -18,20 +22,21 @@
     </nav>
 
     <header class="landing">
-      <h1 id="logo"><span class="hide">logo</span></h1>
-      <h1>The Final Draft</h1>
-      <h2>2017 Portfolio Showcase</h2>
-      <h3>Multimedia Design & Development</h3>
-      <h3>April 26, 2017, 5:00pm - 8:00pm</h3>
+
+      <!-- <h1>The Final Draft</h1> -->
+      <!-- <h2>2017 Portfolio Showcase</h2> -->
+      <div class="videos">
+        <video autoplay loop poster="posterimage.jpg">
+          <source src="http://taxify.co/wp-content/uploads/2014/06/file.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <!-- <h3>April 26, 2017, 5:00pm - 8:00pm</h3> -->
     </header>
 
     <div id="wrapper">
       <section id="about">
-        <div class="videos">
-          <video autoplay loop poster="posterimage.jpg">
-            <source src="http://taxify.co/wp-content/uploads/2014/06/file.mp4" type="video/mp4" />
-          </video>
-        </div>
+        <h2 class="all-caps">Humber College</h2>
+        <h2 class="all-caps">Multimedia Design & Development</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -46,21 +51,29 @@
 
       <section id="grads">
         <h3>Grads</h3>
+        <ul class="job-groups">
+          <li>All</li>
+          <li>Design</li>
+          <li>Development</li>
+          <li>Multimedia</li>
+        </ul>
       </section>
 
       <section id="map">
-        <h1>The final Draft Gradshow</h1>
-        <h2>April 26, 2017</h2>
+        <h2>The final Draft Gradshow</h2>
+        <p>Tuesday, April 26, 2017</p>
         <p>5pm - show opens</p>
         <p>6pm - Award Ceremony</p>
         <p>7pm - Show Closes</p>
         <p> The Burroughes Building, 639 Queen St. West, Toronto</p>
+        <ul class="boxes">
+          <li><a href="#">RSVP</a></li>
+          <li><a href="#">Directions</a></li>
+        </ul>
       </section>
 
       <footer>
-        <h1 class="all-caps">Humber College</h1>
-        <h2>Multimedia Design and Development</h2>
-        <p>2017 MMDD The Final Draft</p>
+        <p class="all-caps">2017 MMDD THE FINAL DRAFT</p>
       </footer>
     </div>
   </body>
