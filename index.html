@@ -3,15 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grad Show</title>
-
+    <title>The Final Draft</title>
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
     <nav>
       <ul>
-        <li><h1 id="logo"><span class="hide">logo</span></h1></li>
-        <li><h1 class="all-caps">The Final Draft</h1></li>
+        <li><a id="logo" href="#"><span class="hide">logo</span></a></li>
+        <li><a id="logo-type" href="#"><h1 class="all-caps">The Final Draft</h1></a></li>
       </ul>
       <ul id="nav-links">
         <li><a href="#">Home</a></li>
@@ -35,8 +34,8 @@
 
     <div id="wrapper">
       <section id="about">
-        <h2 class="all-caps">Humber College</h2>
-        <h2 class="all-caps">Multimedia Design & Development</h2>
+        <h2 class="all-caps"><strong>Humber College</strong></h2>
+        <h2 class="all-caps lighter">Multimedia Design & Development</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -49,22 +48,32 @@
         </p>
       </section>
 
-      <section id="grads">
-        <h3>Grads</h3>
+      <section id="grads" class="bold">
+        <h3><strong>Grads</strong></h3>
         <ul class="job-groups">
           <li>All</li>
           <li>Design</li>
           <li>Development</li>
           <li>Multimedia</li>
         </ul>
+
+        <ul>
+          <li>
+            <a href="#">
+              <img src="http://placehold.it/250x350" alt="placehold">
+              <p>Student</p>
+              <p>Title</p>
+            </a>
+          </li>
+        </ul>
       </section>
 
       <section id="map">
         <h2>The final Draft Gradshow</h2>
-        <p>Tuesday, April 26, 2017</p>
-        <p>5pm - show opens</p>
-        <p>6pm - Award Ceremony</p>
-        <p>7pm - Show Closes</p>
+        <p><strong>Tuesday, April 26, 2017</strong></p>
+        <p><em>5pm - show opens</em></p>
+        <p><em>6pm - Award Ceremony</em></p>
+        <p><em>7pm - Show Closes</em></p>
         <p> The Burroughes Building, 639 Queen St. West, Toronto</p>
         <ul class="boxes">
           <li><a href="#">RSVP</a></li>
@@ -73,7 +82,7 @@
       </section>
 
       <footer>
-        <p class="all-caps">2017 MMDD THE FINAL DRAFT</p>
+        <p class="all-caps lighter">2017 MMDD THE FINAL DRAFT</p>
       </footer>
     </div>
   </body>
