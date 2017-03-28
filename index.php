@@ -7,18 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a id="logo" href="#"><span class="hide">logo</span></a></li>
-        <li><a id="logo-type" href="#"><h1 class="all-caps">The Final Draft</h1></a></li>
-      </ul>
-      <ul id="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Grads</a></li>
-        <li><a href="#">Map</a></li>
-      </ul>
-    </nav>
+    <?php include("includes/nav.inc.php"); ?>
 
     <header class="landing">
 
@@ -80,7 +69,7 @@
 //
           while($row = mysql_fetch_array($result, MYSQL_ASSOC)){
             echo "<li>
-                    <a href='".$row['firstname'].".php'><img src='http://placehold.it/250x350' alt='placeholder'>"
+                    <a href='".lcfirst($row['firstname']).".php'><img src='http://placehold.it/250x350' alt='placeholder'>"
                     .$row['firstname']." ".$row['lastname']."<br><span>".$row['title'].
                     "</span></a>
                 </li>";
@@ -103,9 +92,7 @@
         </ul>
       </section>
 
-      <footer>
-        <p class="all-caps lighter">2017 MMDD THE FINAL DRAFT</p>
-      </footer>
+      <?php include("includes/footer.inc.php"); ?>
     </div>
   </body>
 </html>
