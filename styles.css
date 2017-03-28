@@ -176,14 +176,42 @@ em{
       text-align: center;
     }
 
-      ul.job-groups
-      {
+      ul.job-groups{
         display: flex;
         justify-content: space-between;
         width: 675px;
         margin: 20px auto;
         border: 1px solid red;
       }
+
+      ul.students{
+        width: 1040px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 auto;
+        border: 1px solid red;
+      }
+
+        ul.students li{
+          margin-bottom: 50px;
+        }
+
+          ul.students li a{
+            text-decoration: none;
+            color: #333333;
+          }
+
+            ul.students span{
+              color: #666666;
+              font-size: 1.5rem;
+            }
+
+            ul.students img{
+              display: block;
+              margin-bottom: 20px;
+              height: auto;
+            }
 
     #map{
       color: #fff;
