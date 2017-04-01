@@ -40,35 +40,49 @@
       <section id="grads">
         <h3><strong>Grads</strong></h3>
         <ul class="job-groups">
-          <li><strong>All</strong></li>
-          <li><strong>Design</strong></li>
-          <li><strong>Development</strong></li>
-          <li><strong>Multimedia</strong></li>
+          <li>
+            <input id="select-type-all" name="radio-set-1" type="radio" class="ff-selector-type-all" checked="checked" />
+	          <label for="select-type-all" class="ff-label-type-all">All</label>
+          </li>
+          <li>
+            <input id="select-type-design" name="radio-set-1" type="radio" class="ff-selector-type-design" />
+	          <label for="select-type-design" class="ff-label-type-design">Design</label>
+          </li>
+          <li>
+            <input id="select-type-development" name="radio-set-1" type="radio" class="ff-selector-type-development" />
+	          <label for="select-type-development" class="ff-label-type-development">Development</label>
+          </li>
+          <li>
+            <input id="select-type-multimedia" name="radio-set-1" type="radio" class="ff-selector-type-multimedia" />
+	          <label for="select-type-multimedia" class="ff-label-type-multimedia">Multimedia</label>
+          </li>
         </ul>
 
-        <!-- <ul>
-          <li>
-            <a href="#">
-              <img src="http://placehold.it/250x350" alt="placehold">
-              <p>Student</p>
-              <p>Title</p>
-            </a>
-          </li>
-        </ul> -->
-
         <ul class="students">
-
 
         <?php
           include('db_connect.php');
 
           $mysql = get_connection();
           $result = mysql_query("USE ".DB_NAME) or DIE(mysql_error());
-          $query = "SELECT firstname, lastname, title FROM student_bio";
+          $query = "SELECT firstname, lastname, title, isDesinger, isDeveloper, isMedia FROM student_bio ORDER BY firstname";
           $result = mysql_query($query) or DIE(mysql_error());
 //
           while($row = mysql_fetch_array($result, MYSQL_ASSOC)){
-            echo "<li>
+            $isDesinger= "";
+            $isDeveloper= "";
+            $isMedia= "";
+
+            if($row['isDesinger']==1){
+              $isDesinger= "ff-item-type-design";
+            }
+            if($row['isDeveloper']==1){
+              $isDeveloper= "ff-item-type-development";
+            }
+            if($row['isMedia']==1){
+              $isMedia= "ff-item-type-multimedia";
+            }
+            echo "<li class= '".$isDesinger." ".$isDeveloper." ".$isMedia."'>
                     <a href='".lcfirst($row['firstname']).".php'><img src='http://placehold.it/250x350' alt='placeholder'>"
                     .$row['firstname']." ".$row['lastname']."<br><span>".$row['title'].
                     "</span></a>

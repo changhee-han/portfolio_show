@@ -180,21 +180,52 @@ em{
         display: flex;
         justify-content: space-between;
         width: 675px;
-        margin: 20px auto;
-        border: 1px solid red;
+        margin: 50px auto;
+        /*border: 1px solid red;*/
       }
+
+        ul.job-groups label{
+          font-weight: bold;
+          color: #F7931E;
+          cursor: pointer;
+          padding: 0 10px 10px;
+        }
+
+        ul.job-groups input{
+          display: none;
+        }
+
+        input.ff-selector-type-all:checked ~ label.ff-label-type-all,
+        input.ff-selector-type-design:checked ~ label.ff-label-type-design,
+        input.ff-selector-type-development:checked ~ label.ff-label-type-development,
+        input.ff-selector-type-multimedia:checked ~ label.ff-label-type-multimedia{
+          color: #231F20;
+          border-bottom: 5px solid #231F20;
+        }
 
       ul.students{
         width: 1040px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: flex-start;
         margin: 0 auto;
         border: 1px solid red;
       }
 
         ul.students li{
+          margin-right: 12px;
           margin-bottom: 50px;
+          /*transform: scale(0,0);*/
+        }
+
+        ul.students li:nth-child(4n+4){
+          margin-right: 0;
+        }
+
+        input.ff-selector-type-all:checked ~ ul.students li{
+        	/*width: 188px;*/
+        	transform: scale(1,1);
+        	transition: transform 0.3s linear;
         }
 
           ul.students li a{
@@ -265,10 +296,39 @@ em{
       background: #231F20;
     }
 
+/* ===== Student information page styles =====*/
+  #student-wrapper{
+    width: 1160px;
+    margin: 30px auto 0;
+    border:1px solid red;
+  }
+
+    #student-group{
+      display: flex;
+      /*justify-content: center;*/
+    }
+
+      #student-group h2.title{
+        margin-bottom: 30px;
+      }
+
+      #student-group h3{
+        width: 200px;
+        margin-bottom: 50px;
+      }
+
+      #student-group p{
+        width: 470px;
+      }
+
+        #work{
+          margin: 0 auto;
+        }
+
 /* ===== Student bio styles =====*/
 
 .bio-wrapper{
-  margin: 20px auto 0;
+  margin: 30px auto 0;
   /*border: 1px solid black;*/
   text-align: center;
 }
