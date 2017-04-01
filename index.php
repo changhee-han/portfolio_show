@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Final Draft</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/bb140b11f8.js"></script>
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
@@ -85,7 +86,7 @@
             }
             echo "<li class= 'mix ".$isDesinger." ".$isDeveloper." ".$isMedia."'>
                     <a href='".lcfirst($row['firstname']).".php'><img src='http://placehold.it/250x350' alt='placeholder'>"
-                    .$row['firstname']." ".$row['lastname']."<br><span>".$row['title'].
+                    .ucwords($row['firstname'])." ".ucwords($row['lastname'])."<br><span>".$row['title'].
                     "</span></a>
                 </li>";
           }
@@ -94,33 +95,28 @@
         </ul>
       </section>
 
-      <section id="map">
+      <section id="schdule">
         <h2 class="uppercase">The Final Draft Gradshow</h2>
         <p><strong>Tuesday, April 26, 2017</strong></p>
         <p><em>5pm - show opens</em></p>
         <p><em>6pm - Award Ceremony</em></p>
         <p><em>7pm - Show Closes</em></p>
-        <p> The Burroughes Building, 639 Queen St. West, Toronto</p>
+        <p><span><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i></span> The Burroughes Building, 639 Queen St. West, Toronto</p>
         <ul class="boxes">
           <li><a href="#">RSVP</a></li>
-          <li><a href="#">Directions</a></li>
+          <li><a href="#">Get Directions</a></li>
         </ul>
       </section>
+
+      <div id="map"></div>
+      <script src="js/google-maps.js"></script>
+      <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdqxP4PXwg0Fruke1OOwGU22WSL4Fqve4&callback=initMap">
+      </script>
 
       <?php include("includes/footer.inc.php"); ?>
     </div>
     <script src="js/mixitup.min.js"></script>
-    <script type="text/javascript">
-      var mixer = mixitup('.container');
-      var mixer = mixitup(containerEl);
-      var mixer = mixitup(containerEl, {
-        selectors: {
-          target: '.blog-item'
-        },
-        animation: {
-          duration: 300
-        }
-      });
-    </script>
+    <script src="js/mixitup-code.js"></script>
   </body>
 </html>
