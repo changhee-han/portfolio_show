@@ -49,6 +49,10 @@ section{margin-bottom: 50px;}
 
 /*h1,h2{margin-bottom: 20px;}*/
 
+.center{
+  text-align: center;
+}
+
 .all-caps{
   text-transform: uppercase;
 }
@@ -56,10 +60,6 @@ section{margin-bottom: 50px;}
 .uppercase{
   text-transform: capitalize;
 }
-
-/*.bold{
-  font-weight: bold;
-}*/
 
 .lighter{
   font-family: NeueHaasGroteskLight;
@@ -172,10 +172,6 @@ em{
         margin: 0 auto 20px;
       }
 
-    #grads,#map{
-      text-align: center;
-    }
-
       ul.job-groups{
         display: flex;
         justify-content: space-between;
@@ -204,28 +200,20 @@ em{
         }
 
       ul.students{
-        width: 1040px;
-        display: flex;
+        width: 1042px;
+        /*display: flex;
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: flex-start;*/
+        text-align: center;
         margin: 0 auto;
         border: 1px solid red;
       }
 
         ul.students li{
-          margin-right: 12px;
+          display: inline-block;
+          margin-left: 5px;
+          margin-right: 5px;
           margin-bottom: 50px;
-          /*transform: scale(0,0);*/
-        }
-
-        ul.students li:nth-child(4n+4){
-          margin-right: 0;
-        }
-
-        input.ff-selector-type-all:checked ~ ul.students li{
-        	/*width: 188px;*/
-        	transform: scale(1,1);
-        	transition: transform 0.3s linear;
         }
 
           ul.students li a{
@@ -245,6 +233,7 @@ em{
             }
 
     #map{
+      text-align: center;
       color: #fff;
       background: #231F20;
       padding-top: 90px;

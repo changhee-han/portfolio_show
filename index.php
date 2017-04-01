@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Final Draft</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
@@ -38,27 +39,27 @@
       </section>
 
       <section id="grads">
-        <h3><strong>Grads</strong></h3>
+        <h3 class="center"><strong>Grads</strong></h3>
         <ul class="job-groups">
-          <li>
+          <li data-filter="all">
             <input id="select-type-all" name="radio-set-1" type="radio" class="ff-selector-type-all" checked="checked" />
 	          <label for="select-type-all" class="ff-label-type-all">All</label>
           </li>
-          <li>
+          <li data-filter=".designers">
             <input id="select-type-design" name="radio-set-1" type="radio" class="ff-selector-type-design" />
 	          <label for="select-type-design" class="ff-label-type-design">Design</label>
           </li>
-          <li>
+          <li data-filter=".developers">
             <input id="select-type-development" name="radio-set-1" type="radio" class="ff-selector-type-development" />
 	          <label for="select-type-development" class="ff-label-type-development">Development</label>
           </li>
-          <li>
+          <li data-filter=".multimedia">
             <input id="select-type-multimedia" name="radio-set-1" type="radio" class="ff-selector-type-multimedia" />
 	          <label for="select-type-multimedia" class="ff-label-type-multimedia">Multimedia</label>
           </li>
         </ul>
 
-        <ul class="students">
+        <ul class="container students">
 
         <?php
           include('db_connect.php');
@@ -74,15 +75,15 @@
             $isMedia= "";
 
             if($row['isDesinger']==1){
-              $isDesinger= "ff-item-type-design";
+              $isDesinger= "designers";
             }
             if($row['isDeveloper']==1){
-              $isDeveloper= "ff-item-type-development";
+              $isDeveloper= "developers";
             }
             if($row['isMedia']==1){
-              $isMedia= "ff-item-type-multimedia";
+              $isMedia= "multimedia";
             }
-            echo "<li class= '".$isDesinger." ".$isDeveloper." ".$isMedia."'>
+            echo "<li class= 'mix ".$isDesinger." ".$isDeveloper." ".$isMedia."'>
                     <a href='".lcfirst($row['firstname']).".php'><img src='http://placehold.it/250x350' alt='placeholder'>"
                     .$row['firstname']." ".$row['lastname']."<br><span>".$row['title'].
                     "</span></a>
@@ -108,5 +109,18 @@
 
       <?php include("includes/footer.inc.php"); ?>
     </div>
+    <script src="js/mixitup.min.js"></script>
+    <script type="text/javascript">
+      var mixer = mixitup('.container');
+      var mixer = mixitup(containerEl);
+      var mixer = mixitup(containerEl, {
+        selectors: {
+          target: '.blog-item'
+        },
+        animation: {
+          duration: 300
+        }
+      });
+    </script>
   </body>
 </html>
