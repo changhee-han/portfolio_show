@@ -221,6 +221,7 @@ em{
 
         ul.students li{
           display: inline-block;
+          width: 250px;
           margin-left: 5px;
           margin-right: 5px;
           margin-bottom: 50px;
@@ -239,6 +240,7 @@ em{
             ul.students img{
               display: block;
               margin-bottom: 20px;
+              width: 100%;
               height: auto;
             }
 
