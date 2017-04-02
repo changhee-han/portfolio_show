@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Final Draft</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/smooth_scroll.js"></script>
     <script src="https://use.fontawesome.com/bb140b11f8.js"></script>
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
     <?php include("includes/nav.inc.php"); ?>
 
-    <header class="landing">
+    <header id="home" class="landing">
 
       <!-- <h1>The Final Draft</h1> -->
       <!-- <h2>2017 Portfolio Showcase</h2> -->
@@ -104,7 +105,7 @@
         <p><span><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i></span> The Burroughes Building, 639 Queen St. West, Toronto</p>
         <ul class="boxes">
           <li><a href="#">RSVP</a></li>
-          <li><a href="#">Get Directions</a></li>
+          <li><a href="https://www.google.ca/maps/place/The+Burroughes+Building/@43.6471861,-79.4055349,17z/data=!3m1!4b1!4m5!3m4!1s0x882b34e75b32c1b1:0xf2bfe4629a54cda5!8m2!3d43.6471861!4d-79.4033462" target="_blank">Get Directions</a></li>
         </ul>
       </section>
 
