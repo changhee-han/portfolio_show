@@ -221,6 +221,7 @@ em{
 
         ul.students li{
           display: inline-block;
+          position: relative;
           width: 250px;
           margin-left: 5px;
           margin-right: 5px;
@@ -242,6 +243,18 @@ em{
               margin-bottom: 20px;
               width: 100%;
               height: auto;
+            }
+
+            ul.students img.portrait{
+              position: absolute;
+              top: 0;
+              opacity: 0;
+              transition: opacity 1s;
+              border: 1px solid red;
+            }
+
+            ul.students a:hover img.portrait{
+              opacity: 1;
             }
 
     #schdule{

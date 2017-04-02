@@ -68,13 +68,20 @@
 
           $mysql = get_connection();
           $result = mysql_query("USE ".DB_NAME) or DIE(mysql_error());
-          $query = "SELECT firstname, lastname, title, isDesinger, isDeveloper, isMedia FROM student_bio ORDER BY firstname";
+          $query = "SELECT firstname, lastname, title, isDesinger, isDeveloper, isMedia, workThumbnail, portrait FROM student_bio ORDER BY firstname";
           $result = mysql_query($query) or DIE(mysql_error());
 //
           while($row = mysql_fetch_array($result, MYSQL_ASSOC)){
             $isDesinger= "";
             $isDeveloper= "";
             $isMedia= "";
+
+            $studentPortrait= "<img class='portrait' src='".$row['portrait']."' alt='".$row['firstname']." ".$row['lastname']."'>";
+
+            if(empty($row['portrait'])){
+                // it's empty!
+                $studentPortrait= "";
+            }
 
             if($row['isDesinger']==1){
               $isDesinger= "designers";
@@ -86,9 +93,11 @@
               $isMedia= "multimedia";
             }
             echo "<li class= 'mix ".$isDesinger." ".$isDeveloper." ".$isMedia."'>
-                    <a href='".lcfirst($row['firstname']).".php'><img src='http://placehold.it/250x350' alt='placeholder'>"
+                    <a href='".lcfirst($row['firstname']).".php'><img src='".$row['workThumbnail']."' alt='".$row['firstname']." ".$row['lastname']."'>"
                     .ucwords($row['firstname'])." ".ucwords($row['lastname'])."<br><span>".$row['title'].
-                    "</span></a>
+                    "</span>
+                      ".$studentPortrait."
+                    </a>
                 </li>";
           }
           mysql_close($mysql);
