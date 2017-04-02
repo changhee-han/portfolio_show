@@ -49,6 +49,10 @@ section{margin-bottom: 50px;}
 
 /*h1,h2{margin-bottom: 20px;}*/
 
+.center{
+  text-align: center;
+}
+
 .all-caps{
   text-transform: uppercase;
 }
@@ -56,10 +60,6 @@ section{margin-bottom: 50px;}
 .uppercase{
   text-transform: capitalize;
 }
-
-/*.bold{
-  font-weight: bold;
-}*/
 
 .lighter{
   font-family: NeueHaasGroteskLight;
@@ -109,9 +109,9 @@ em{
         }
 
         a#logo{
-          background-image: url("http://placehold.it/54x69");
-          width:54px;
-          height: 69px;
+          background-image: url("../images/logo.png");
+          width:57px;
+          height: 72px;
           margin: 0 auto;
         }
 
@@ -172,10 +172,6 @@ em{
         margin: 0 auto 20px;
       }
 
-    #grads,#map{
-      text-align: center;
-    }
-
       ul.job-groups{
         display: flex;
         justify-content: space-between;
@@ -189,6 +185,7 @@ em{
           color: #F7931E;
           cursor: pointer;
           padding: 0 10px 10px;
+          transition: color 1s, border .5s;
         }
 
         ul.job-groups input{
@@ -204,28 +201,20 @@ em{
         }
 
       ul.students{
-        width: 1040px;
-        display: flex;
+        width: 1042px;
+        /*display: flex;
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: flex-start;*/
+        text-align: center;
         margin: 0 auto;
         border: 1px solid red;
       }
 
         ul.students li{
-          margin-right: 12px;
+          display: inline-block;
+          margin-left: 5px;
+          margin-right: 5px;
           margin-bottom: 50px;
-          /*transform: scale(0,0);*/
-        }
-
-        ul.students li:nth-child(4n+4){
-          margin-right: 0;
-        }
-
-        input.ff-selector-type-all:checked ~ ul.students li{
-        	/*width: 188px;*/
-        	transform: scale(1,1);
-        	transition: transform 0.3s linear;
         }
 
           ul.students li a{
@@ -244,23 +233,29 @@ em{
               height: auto;
             }
 
-    #map{
+    #schdule{
+      text-align: center;
       color: #fff;
       background: #231F20;
       padding-top: 90px;
       padding-bottom: 90px;
+      margin-bottom: 0px;
     }
 
-      #map h2{
+      #schdule h2{
         margin-bottom: 60px;
       }
 
-      #map p{
+      #schdule p{
         margin-bottom: 20px;
       }
 
-      #map p:last-of-type{
+      #schdule p:last-of-type{
         margin-bottom: 50px;
+      }
+
+      #schdule p:last-of-type span{
+        margin-right: 15px;
       }
 
       .boxes{
@@ -281,9 +276,14 @@ em{
             color: #fff;
             width: 140px;
             height: 60px;
-            padding: 20px 32px;
+            padding: 20px;
             background: #FBB03B;
           }
+
+    #map{
+      width: 100%;
+      height: 490px;
+    }
 
 
     footer{
