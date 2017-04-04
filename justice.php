@@ -32,24 +32,28 @@
           $title = $row['title'];
           $statement = $row['statement'];
           $bio = $row['bio'];
+          $studentPortrait = $row['portrait'];
+          $screenshot = $row['screenshot'];
         }
       ?>
+      <h2><strong> <?php echo $firstname." ".$lastname; ?></strong></h2>
+      <h2 class="title"><?php echo $title; ?></h2>
       <div id="student-group">
         <section id="info">
-          <h2><strong> <?php echo $firstname." ".$lastname; ?></strong></h2>
-          <h2 class="title"><?php echo $title; ?></h2>
-          <img src="<?php echo $firstname; ?>.jpg" alt="<?php echo $firstname." ".$lastname; ?>">
-          <h3 class="all-caps"><strong><?php echo $statement; ?></strong></h3>
+          <div class="pic-quote">
+            <img src="<?php echo $studentPortrait; ?>" alt="<?php echo $firstname." ".$lastname; ?>">
+            <h3 class="all-caps"><strong><?php echo $statement; ?></strong></h3>
+          </div>
           <p><?php echo $bio; ?></p>
         </section>
         <section id="work">
-          <img src="<?php echo $firstname.".png"; ?>" alt="<?php echo $firstname."'s work'" ?>">
-          <img src="http://placehold.it/405x295" alt="">
-          <a href="http://<?php echo $website; ?>" target="_blank"><?php echo $website; ?></a>
-
+          <a href="<?php echo $website; ?>" target="_blank">
+            <img src="<?php echo $screenshot; ?>" alt="<?php echo $firstname; ?>">
+            <?php echo $website; ?>
+          </a>
         </section>
       </div>
-  </div> <!-- End Student-wrapper -->
+    </div> <!-- End Student-wrapper -->
     <?php include("includes/footer.inc.php"); ?>
   </body>
 </html>

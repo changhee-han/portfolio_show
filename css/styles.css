@@ -33,17 +33,11 @@ body{
   line-height: normal;
 }
 
-h1{
-  font-size: 4.2rem;
-}
+h1{font-size: 4.2rem;}
 
-h2{
-  font-size: 2.6rem;
-}
+h2{font-size: 2.6rem;}
 
-h3{
-  font-size: 2rem;
-}
+h3{font-size: 2rem;}
 
 section{margin-bottom: 50px;}
 
@@ -120,6 +114,14 @@ em{
           font-weight: normal;
         }
 
+        a#menu_mobile{
+          display: none;
+          color: #F7931E;
+          width: 100%;
+          text-decoration: none;
+          font-size: 3.6rem;
+        }
+
     nav ul#nav-links{
       justify-content: flex-end;
     }
@@ -186,7 +188,7 @@ em{
         justify-content: space-between;
         width: 675px;
         margin: 50px auto;
-        /*border: 1px solid red;*/
+        border: 1px solid red;
       }
 
         ul.job-groups label{
@@ -250,7 +252,7 @@ em{
               top: 0;
               opacity: 0;
               transition: opacity 1s;
-              border: 1px solid red;
+              /*border: 1px solid red;*/
             }
 
             ul.students a:hover img.portrait{
@@ -331,9 +333,21 @@ em{
       display: flex;
       /*justify-content: center;*/
     }
+      #info{
+        border: 1px solid green;
+      }
 
-      #student-group h2.title{
+      #work{
+        border: 1px solid orange;
+      }
+
+      h2.title{
         margin-bottom: 30px;
+      }
+
+      #info img{
+        margin-bottom: 60px;
+        display: block;
       }
 
       #student-group h3{
@@ -348,6 +362,16 @@ em{
         #work{
           margin: 0 auto;
         }
+          #work img{
+            width: 100%;
+            height: auto;
+          }
+          #work a{
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: #000;
+          }
 
 /* ===== Student bio styles =====*/
 

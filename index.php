@@ -6,8 +6,12 @@
     <title>The Final Draft</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/smooth_scroll.js"></script>
+    <!-- <script type="js/mobile_toggle.js"></script> -->
     <script src="https://use.fontawesome.com/bb140b11f8.js"></script>
+    <!-- Adds CSS3 Media Queries to older browsers such as IES+  -->
+    <script src="js/css3-mediaqueries.js"></script>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/media.css">
   </head>
   <body>
     <?php include("includes/nav.inc.php"); ?>
@@ -29,15 +33,15 @@
         <h2 class="all-caps"><strong>Humber College</strong></h2>
         <h2 class="all-caps lighter">Multimedia Design & Development</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco
-          laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-          cupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum.
+          The Final Draft is a showcase for the Multimedia Design and Development
+          2017 Graduating Class of Humber College. Emerging designers, developers,
+          and multimedia artists coming together to showcase the final draft of a
+          range works including web design, mobile interface design, experience design,
+          motion graphics, 2-D animation, web coding, streaming, user testing, video
+          and sound editing, user interface prototyping, digital storytelling, and
+          interactive design.
         </p>
+        <p>Interested in meeting or drafting new talent? <a href="#">RSVP</a> now.</p>
       </section>
 
       <section id="grads">
@@ -76,9 +80,9 @@
             $isDeveloper= "";
             $isMedia= "";
 
-            $studentPortrait= "<img class='portrait' src='".$row['portrait']."' alt='".$row['firstname']." ".$row['lastname']."'>";
+            $studentPortrait= "<img class='portrait' src='".$row['workThumbnail']."' alt='".$row['firstname']." ".$row['lastname']."'>";
 
-            if(empty($row['portrait'])){
+            if(empty($row['workThumbnail'])){
                 // it's empty!
                 $studentPortrait= "";
             }
@@ -93,7 +97,7 @@
               $isMedia= "multimedia";
             }
             echo "<li class= 'mix ".$isDesinger." ".$isDeveloper." ".$isMedia."'>
-                    <a href='".lcfirst($row['firstname']).".php'><img src='".$row['workThumbnail']."' alt='".$row['firstname']." ".$row['lastname']."'>"
+                    <a href='".lcfirst($row['firstname']).".php'><img src='".$row['portrait']."' alt='".$row['firstname']." ".$row['lastname']."'>"
                     .ucwords($row['firstname'])." ".ucwords($row['lastname'])."<br><span>".$row['title'].
                     "</span>
                       ".$studentPortrait."
