@@ -89,7 +89,7 @@ em{
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      border: 1px solid;
+      /*border: 1px solid;*/
     }
 
       nav ul li{
@@ -148,8 +148,14 @@ em{
     justify-content: center;*/
   }
 
+    header img{
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
     .videos{
-      border: 1px solid red;
+      /*border: 1px solid red;*/
       position:relative;
 	    padding:56.25% 0 0;
     }
@@ -183,12 +189,17 @@ em{
         margin: 0 auto 20px;
       }
 
+        #about a{
+          color: #F7931E;
+          text-decoration: none;
+        }
+
       ul.job-groups{
         display: flex;
         justify-content: space-between;
         width: 675px;
         margin: 50px auto;
-        border: 1px solid red;
+        /*border: 1px solid red;*/
       }
 
         ul.job-groups label{
@@ -218,7 +229,7 @@ em{
         justify-content: flex-start;*/
         text-align: center;
         margin: 0 auto;
-        border: 1px solid red;
+        /*border: 1px solid red;*/
       }
 
         ul.students li{
@@ -326,7 +337,7 @@ em{
   #student-wrapper{
     width: 1160px;
     margin: 30px auto 0;
-    border:1px solid red;
+    /*border:1px solid red;*/
   }
 
     #student-group{
@@ -334,34 +345,41 @@ em{
       /*justify-content: center;*/
     }
       #info{
-        border: 1px solid green;
+        /*border: 1px solid green;*/
+        margin-right: 50px;
       }
 
       #work{
-        border: 1px solid orange;
+        /*border: 1px solid orange;*/
+        margin: 0 auto 20px;
       }
 
-      h2.title{
+      h3.title{
         margin-bottom: 30px;
       }
 
       #info img{
+        width: 250px;
+        height: auto;
         margin-bottom: 60px;
         display: block;
       }
 
-      #student-group h3{
+        .pic-quote{
+          display: flex;
+          justify-content: space-between;
+        }
+
+      #student-group .title-quote{
         width: 200px;
-        margin-bottom: 50px;
+        align-self: flex-end;
+        margin-bottom: 60px;
+        margin-left: 20px;
       }
 
       #student-group p{
         width: 470px;
       }
-
-        #work{
-          margin: 0 auto;
-        }
           #work img{
             width: 100%;
             height: auto;

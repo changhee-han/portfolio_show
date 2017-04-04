@@ -8,6 +8,32 @@
   ul.students{
     width: 782px;
   }
+
+  #student-group{
+    flex-direction: column;
+  }
+
+  #info{
+    margin-right: auto;
+    margin-left: auto;
+    width: 575px;
+  }
+
+  #work{
+    width: 575px;
+  }
+
+    #info p{
+      width: 100%;
+    }
+
+  .pic-quote{
+    justify-content: flex-start;
+  }
+
+  /*.pic-quote h3{
+    margin-left: 20px;
+  }*/
 }
 
 @media screen and (max-width: 900px){
@@ -38,7 +64,7 @@
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid green;
+    /*border: 1px solid green;*/
   }
 
     ul.students{
@@ -97,7 +123,7 @@
       width: 90%;
       margin-left: auto;
       margin-right: auto;
-      border: 1px solid green;
+      /*border: 1px solid green;*/
     }
     ul.job-groups{
       flex-direction: column;
@@ -117,5 +143,26 @@
 
       .boxes li{
         margin-bottom: 20px;
+      }
+
+      #info{
+        width: 100%;
+      }
+
+      #work{
+        width: 100%;
+      }
+
+      .pic-quote{
+        flex-direction: column;
+      }
+
+      #student-group .title-quote{
+        width: 200px;
+        margin-left: 0px;
+        /*align-self: flex-end;*/
+        margin-bottom: 60px;
+        /*margin-left: 20px;*/
+        align-self: flex-start;
       }
 }
