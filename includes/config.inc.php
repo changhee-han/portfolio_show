@@ -12,4 +12,9 @@
   $page_title = substr($page_title, 0, -4);
   //Uppercase each first letter of a word
   $page_title = ucwords($page_title);
+
+  //Changes the page title variable if it match Index or Form
+  if($page_title == "Index") {
+    $page_title = "Home";
+  }
  ?>

@@ -33,17 +33,11 @@ body{
   line-height: normal;
 }
 
-h1{
-  font-size: 4.2rem;
-}
+h1{font-size: 4.2rem;}
 
-h2{
-  font-size: 2.6rem;
-}
+h2{font-size: 2.6rem;}
 
-h3{
-  font-size: 2rem;
-}
+h3{font-size: 2rem;}
 
 section{margin-bottom: 50px;}
 
@@ -95,7 +89,7 @@ em{
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      border: 1px solid;
+      /*border: 1px solid;*/
     }
 
       nav ul li{
@@ -118,6 +112,14 @@ em{
 
         a#logo-type{
           font-weight: normal;
+        }
+
+        a#menu_mobile{
+          display: none;
+          color: #F7931E;
+          width: 100%;
+          text-decoration: none;
+          font-size: 3.6rem;
         }
 
     nav ul#nav-links{
@@ -146,8 +148,14 @@ em{
     justify-content: center;*/
   }
 
+    header img{
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
     .videos{
-      border: 1px solid red;
+      /*border: 1px solid red;*/
       position:relative;
 	    padding:56.25% 0 0;
     }
@@ -180,6 +188,11 @@ em{
         width: 675px;
         margin: 0 auto 20px;
       }
+
+        #about a{
+          color: #F7931E;
+          text-decoration: none;
+        }
 
       ul.job-groups{
         display: flex;
@@ -216,11 +229,13 @@ em{
         justify-content: flex-start;*/
         text-align: center;
         margin: 0 auto;
-        border: 1px solid red;
+        /*border: 1px solid red;*/
       }
 
         ul.students li{
           display: inline-block;
+          position: relative;
+          width: 250px;
           margin-left: 5px;
           margin-right: 5px;
           margin-bottom: 50px;
@@ -239,7 +254,20 @@ em{
             ul.students img{
               display: block;
               margin-bottom: 20px;
+              width: 100%;
               height: auto;
+            }
+
+            ul.students img.portrait{
+              position: absolute;
+              top: 0;
+              opacity: 0;
+              transition: opacity 1s;
+              /*border: 1px solid red;*/
+            }
+
+            ul.students a:hover img.portrait{
+              opacity: 1;
             }
 
     #schdule{
@@ -309,30 +337,61 @@ em{
   #student-wrapper{
     width: 1160px;
     margin: 30px auto 0;
-    border:1px solid red;
+    /*border:1px solid red;*/
   }
 
     #student-group{
       display: flex;
       /*justify-content: center;*/
     }
+      #info{
+        /*border: 1px solid green;*/
+        margin-right: 50px;
+      }
 
-      #student-group h2.title{
+      #work{
+        /*border: 1px solid orange;*/
+        width: 100%;
+        margin: 0 auto 20px;
+      }
+
+      h3.title{
         margin-bottom: 30px;
       }
 
-      #student-group h3{
+      #info img{
+        width: 250px;
+        height: auto;
+        max-height: 350px;
+        margin-bottom: 60px;
+        display: block;
+      }
+
+        .pic-quote{
+          display: flex;
+          justify-content: space-between;
+        }
+
+      #student-group .title-quote{
         width: 200px;
-        margin-bottom: 50px;
+        align-self: flex-end;
+        margin-bottom: 60px;
+        margin-left: 20px;
       }
 
       #student-group p{
         width: 470px;
       }
-
-        #work{
-          margin: 0 auto;
-        }
+          #work img{
+            width: 100%;
+            height: auto;
+          }
+          #work a{
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: #000;
+          }
 
 /* ===== Student bio styles =====*/
 

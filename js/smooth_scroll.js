@@ -16,4 +16,9 @@ $(document).ready(function(){
         });//End animate
       }// End if statement
     });//End click function
+    $("a#menu_mobile").click(function(){
+      /* Toggle the Nav when the mobile menu button is pressed. */
+      $("nav ul#nav-links").slideToggle(1000);
+
+    });
 });//End ready function

@@ -1,3 +1,4 @@
+<?php include("includes/config.inc.php"); ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,22 +7,23 @@
     <title>The Final Draft</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/smooth_scroll.js"></script>
+    <!-- <script type="js/mobile_toggle.js"></script> -->
     <script src="https://use.fontawesome.com/bb140b11f8.js"></script>
+    <!-- Adds CSS3 Media Queries to older browsers such as IES+  -->
+    <script src="js/css3-mediaqueries.js"></script>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/media.css">
   </head>
   <body>
     <?php include("includes/nav.inc.php"); ?>
 
     <header id="home" class="landing">
-
-      <!-- <h1>The Final Draft</h1> -->
-      <!-- <h2>2017 Portfolio Showcase</h2> -->
-      <div class="videos">
+      <!-- <div class="videos">
         <video autoplay loop poster="posterimage.jpg">
           <source src="http://taxify.co/wp-content/uploads/2014/06/file.mp4" type="video/mp4" />
         </video>
-      </div>
-      <!-- <h3>April 26, 2017, 5:00pm - 8:00pm</h3> -->
+      </div> -->
+      <img src="images/video_placeholder.png" alt="Video placeholder">
     </header>
 
     <div id="wrapper">
@@ -29,15 +31,15 @@
         <h2 class="all-caps"><strong>Humber College</strong></h2>
         <h2 class="all-caps lighter">Multimedia Design & Development</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco
-          laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-          cupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum.
+          The Final Draft is a showcase for the Multimedia Design and Development
+          2017 Graduating Class of Humber College. Emerging designers, developers,
+          and multimedia artists coming together to showcase the final draft of a
+          range works including web design, mobile interface design, experience design,
+          motion graphics, 2-D animation, web coding, streaming, user testing, video
+          and sound editing, user interface prototyping, digital storytelling, and
+          interactive design.
         </p>
+        <p>Interested in meeting or drafting new talent? <a href="https://mmddthefinaldraft.eventbrite.ca" target="_blank">RSVP</a> now.</p>
       </section>
 
       <section id="grads">
@@ -68,13 +70,20 @@
 
           $mysql = get_connection();
           $result = mysql_query("USE ".DB_NAME) or DIE(mysql_error());
-          $query = "SELECT firstname, lastname, title, isDesinger, isDeveloper, isMedia FROM student_bio ORDER BY firstname";
+          $query = "SELECT firstname, lastname, title, isDesinger, isDeveloper, isMedia, workThumbnail, portrait FROM student_bio ORDER BY firstname";
           $result = mysql_query($query) or DIE(mysql_error());
 //
           while($row = mysql_fetch_array($result, MYSQL_ASSOC)){
             $isDesinger= "";
             $isDeveloper= "";
             $isMedia= "";
+
+            $studentPortrait= "<img class='portrait' src='".$row['workThumbnail']."' alt='".$row['firstname']." ".$row['lastname']."'>";
+
+            if(empty($row['workThumbnail'])){
+                // it's empty!
+                $studentPortrait= "";
+            }
 
             if($row['isDesinger']==1){
               $isDesinger= "designers";
@@ -85,10 +94,16 @@
             if($row['isMedia']==1){
               $isMedia= "multimedia";
             }
+
+            $firstnamelink = $row['firstname'];
+            $firstnamelink = str_replace(" ", "_", $row['firstname']);
+
             echo "<li class= 'mix ".$isDesinger." ".$isDeveloper." ".$isMedia."'>
-                    <a href='".lcfirst($row['firstname']).".php'><img src='http://placehold.it/250x350' alt='placeholder'>"
+                    <a href='".strtolower($firstnamelink).".php'><img src='".$row['portrait']."' alt='".$row['firstname']." ".$row['lastname']."'>"
                     .ucwords($row['firstname'])." ".ucwords($row['lastname'])."<br><span>".$row['title'].
-                    "</span></a>
+                    "</span>
+                      ".$studentPortrait."
+                    </a>
                 </li>";
           }
           mysql_close($mysql);
@@ -98,13 +113,13 @@
 
       <section id="schdule">
         <h2 class="uppercase">The Final Draft Gradshow</h2>
-        <p><strong>Tuesday, April 26, 2017</strong></p>
+        <p><strong>Tuesday, April 25, 2017</strong></p>
         <p><em>5pm - show opens</em></p>
         <p><em>6pm - Award Ceremony</em></p>
         <p><em>7pm - Show Closes</em></p>
         <p><span><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i></span> The Burroughes Building, 639 Queen St. West, Toronto</p>
         <ul class="boxes">
-          <li><a href="#">RSVP</a></li>
+          <li><a href="https://mmddthefinaldraft.eventbrite.ca" target="_blank">RSVP</a></li>
           <li><a href="https://www.google.ca/maps/place/The+Burroughes+Building/@43.6471861,-79.4055349,17z/data=!3m1!4b1!4m5!3m4!1s0x882b34e75b32c1b1:0xf2bfe4629a54cda5!8m2!3d43.6471861!4d-79.4033462" target="_blank">Get Directions</a></li>
         </ul>
       </section>
