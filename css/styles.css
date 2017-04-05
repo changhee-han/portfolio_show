@@ -351,6 +351,7 @@ em{
 
       #work{
         /*border: 1px solid orange;*/
+        width: 100%;
         margin: 0 auto 20px;
       }
 
@@ -361,6 +362,7 @@ em{
       #info img{
         width: 250px;
         height: auto;
+        max-height: 350px;
         margin-bottom: 60px;
         display: block;
       }

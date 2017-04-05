@@ -1,3 +1,4 @@
+<?php include("includes/config.inc.php"); ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -17,15 +18,12 @@
     <?php include("includes/nav.inc.php"); ?>
 
     <header id="home" class="landing">
-
-      <!-- <h1>The Final Draft</h1> -->
-      <!-- <h2>2017 Portfolio Showcase</h2> -->
-      <div class="videos">
+      <!-- <div class="videos">
         <video autoplay loop poster="posterimage.jpg">
           <source src="http://taxify.co/wp-content/uploads/2014/06/file.mp4" type="video/mp4" />
         </video>
-      </div>
-      <!-- <h3>April 26, 2017, 5:00pm - 8:00pm</h3> -->
+      </div> -->
+      <img src="images/video_placeholder.png" alt="Video placeholder">
     </header>
 
     <div id="wrapper">
@@ -41,7 +39,7 @@
           and sound editing, user interface prototyping, digital storytelling, and
           interactive design.
         </p>
-        <p>Interested in meeting or drafting new talent? <a href="#">RSVP</a> now.</p>
+        <p>Interested in meeting or drafting new talent? <a href="https://mmddthefinaldraft.eventbrite.ca" target="_blank">RSVP</a> now.</p>
       </section>
 
       <section id="grads">
@@ -96,8 +94,12 @@
             if($row['isMedia']==1){
               $isMedia= "multimedia";
             }
+
+            $firstnamelink = $row['firstname'];
+            $firstnamelink = str_replace(" ", "_", $row['firstname']);
+
             echo "<li class= 'mix ".$isDesinger." ".$isDeveloper." ".$isMedia."'>
-                    <a href='".lcfirst($row['firstname']).".php'><img src='".$row['portrait']."' alt='".$row['firstname']." ".$row['lastname']."'>"
+                    <a href='".strtolower($firstnamelink).".php'><img src='".$row['portrait']."' alt='".$row['firstname']." ".$row['lastname']."'>"
                     .ucwords($row['firstname'])." ".ucwords($row['lastname'])."<br><span>".$row['title'].
                     "</span>
                       ".$studentPortrait."
@@ -111,13 +113,13 @@
 
       <section id="schdule">
         <h2 class="uppercase">The Final Draft Gradshow</h2>
-        <p><strong>Tuesday, April 26, 2017</strong></p>
+        <p><strong>Tuesday, April 25, 2017</strong></p>
         <p><em>5pm - show opens</em></p>
         <p><em>6pm - Award Ceremony</em></p>
         <p><em>7pm - Show Closes</em></p>
         <p><span><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i></span> The Burroughes Building, 639 Queen St. West, Toronto</p>
         <ul class="boxes">
-          <li><a href="#">RSVP</a></li>
+          <li><a href="https://mmddthefinaldraft.eventbrite.ca" target="_blank">RSVP</a></li>
           <li><a href="https://www.google.ca/maps/place/The+Burroughes+Building/@43.6471861,-79.4055349,17z/data=!3m1!4b1!4m5!3m4!1s0x882b34e75b32c1b1:0xf2bfe4629a54cda5!8m2!3d43.6471861!4d-79.4033462" target="_blank">Get Directions</a></li>
         </ul>
       </section>

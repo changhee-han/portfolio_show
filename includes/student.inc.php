@@ -23,18 +23,18 @@ while($row = mysql_fetch_array($result, MYSQL_ASSOC)){
       <div class="pic-quote">
         <img src="<?php echo $studentPortrait; ?>" alt="<?php echo $firstname." ".$lastname; ?>">
         <div class="title-quote">
-          <h3><strong> <?php echo $firstname." ".$lastname; ?></strong></h2>
-          <h3 class="title"><?php echo $title; ?></h2>
-          <h4 class="all-caps"><strong><?php echo $statement; ?></strong></h3>
+          <h3><strong> <?php echo $firstname." ".$lastname; ?></strong></h3>
+          <h3 class="title"><?php echo $title; ?></h3>
+          <h4 class="all-caps"><strong><?php echo $statement; ?></strong></h4>
         </div>
       </div>
       <p><?php echo $bio; ?></p>
     </section>
-    <section id="work">
+    <div id="work">
       <a href="<?php echo $website; ?>" target="_blank">
         <img src="<?php echo $screenshot; ?>" alt="<?php echo $firstname; ?>">
         <?php echo $website; ?>
       </a>
-    </section>
+    </div>
   </div>
 </div> <!-- End Student-wrapper -->
