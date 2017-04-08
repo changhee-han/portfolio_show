@@ -31,6 +31,7 @@ body{
   font-family: NeueHaasGrotesk;
   font-size: 1.6rem;
   line-height: normal;
+  background: #231F20; /*black*/
 }
 
 h1{font-size: 4.2rem;}
@@ -74,15 +75,23 @@ em{
   span.hide{display: none;}
 
   nav{
-    /*position: fixed;
-    top:0;
-    left:0;
-    z-index: 100;*/
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 105px;
     background: #231F20; /*black*/
+    transition: background 1s;
+  }
+
+  nav.fixed{
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 100;
+  }
+
+  nav.clear{
+    background-color: rgba(35, 31, 32, 0.5);/*black*/
   }
 
     nav ul{
@@ -140,13 +149,67 @@ em{
         margin-right: 70px;
       }
 
+      /*SVG animation*/
+
+  @-webkit-keyframes trace {
+    0% { stroke-dashoffset: 500 }
+    100% { stroke-dashoffset: 0 }
+  }
+
+  @keyframes trace {
+    0% { stroke-dashoffset: 500 }
+    100% { stroke-dashoffset: 0 }
+  }
+
   header.landing{
     /*text-align: center;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;*/
+    margin-top: 105px;
+    height: 80vh;
+    color: #FF8300;
   }
+
+    hgroup{
+      background-color: #242528;
+      width: 100%;
+      height: 100%;
+      padding: 25px;
+    }
+
+  svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+}
+
+  path {
+    stroke-dasharray: 250;
+    stroke-dashoffset: 250;
+    -webkit-animation: trace 16s linear infinite;
+            animation: trace 16s linear infinite;
+  }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .fadeIn {
+      animation-name: fadeIn;
+    }
 
     header img{
       width: 100%;
@@ -171,6 +234,10 @@ em{
 	      bottom:0;
       }
 
+    #wrapper{
+        background-color: #fff;
+    }
+
     #about{
       background: #231F20; /*black*/
       color: #fff;
@@ -180,6 +247,10 @@ em{
       text-align: center;
     }
 
+      #about h2 {
+          line-height: 36px;
+      }
+
       #about h2:last-of-type{
         margin-bottom: 40px;
       }
@@ -187,6 +258,7 @@ em{
       #about p{
         width: 675px;
         margin: 0 auto 20px;
+        line-height: 24px;
       }
 
         #about a{
@@ -244,6 +316,7 @@ em{
           ul.students li a{
             text-decoration: none;
             color: #333333;
+            font-size: 18px;
           }
 
             ul.students span{
@@ -306,6 +379,10 @@ em{
           /*background: #FBB03B;*/
         }
 
+        .boxes.buttons li{
+            margin: 10px 10px 20px;
+        }
+
           .boxes a{
             display: block;
             box-sizing: border-box;
@@ -314,6 +391,7 @@ em{
             width: 140px;
             height: 60px;
             padding: 20px;
+            text-align: center;
             background: #FBB03B;
           }
 
@@ -334,7 +412,11 @@ em{
     }
 
 /* ===== Student information page styles =====*/
-  #student-wrapper{
+
+body.student{
+    background: #fff;
+}
+  .student-wrapper{
     width: 1160px;
     margin: 30px auto 0;
     /*border:1px solid red;*/
@@ -349,11 +431,20 @@ em{
         margin-right: 50px;
       }
 
+      #info p {
+        letter-spacing: 1px;
+        line-height: 20px;
+      }
+
       #work{
         /*border: 1px solid orange;*/
         width: 100%;
         margin: 0 auto 20px;
       }
+
+        #work img{
+            margin-bottom: 10px;
+        }
 
       h3.title{
         margin-bottom: 30px;
@@ -377,6 +468,15 @@ em{
         align-self: flex-end;
         margin-bottom: 60px;
         margin-left: 20px;
+      }
+
+      #student-group .title-quote .student_name {
+        font-size: 26px;
+      }
+
+      #student-group .title-quote  .student_statement {
+        line-height: 24px;
+        letter-spacing: 1px;
       }
 
       #student-group p{
@@ -466,4 +566,14 @@ em{
     .bio-wrapper ul li{
       width: 100%;
     }
+}
+
+
+
+/*Changhee added*/
+.studentProfile {
+    display: none;
+}
+.displayProfile {
+    display: block;
 }

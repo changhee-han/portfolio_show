@@ -1,4 +1,4 @@
-<nav>
+<nav class="menu <?php if($page_title == 'Home'){echo 'fixed';} ?>">
   <ul>
     <li><a class="<?php if($page_title == 'Home'){echo 'scroll';} ?>" id="logo" href="<?php if($page_title == 'Home'){echo '#home';} else{echo 'index.php#home';} ?>"><span class="hide">logo</span></a></li>
     <li><a class="<?php if($page_title == 'Home'){echo 'scroll';} ?>" id="logo-type" href="<?php if($page_title == 'Home'){echo '#home';} else{echo 'index.php#home';} ?>"><h1 class="all-caps">The Final Draft</h1></a></li>

@@ -19,6 +19,23 @@ $(document).ready(function(){
     $("a#menu_mobile").click(function(){
       /* Toggle the Nav when the mobile menu button is pressed. */
       $("nav ul#nav-links").slideToggle(1000);
-
+    });
+    $(window).bind('scroll', function () {
+      var about = $("#about").offset().top -50;
+      if ($(window).scrollTop() > about) {
+          $('.menu').addClass('clear');
+      } else {
+          $('.menu').removeClass('clear');
+      }
     });
 });//End ready function
+
+
+//Changhee added  
+
+function changeProfileDisplay (id){
+    $('.studentProfile').hide();
+    $('#'+id).show();
+    
+    
+}
