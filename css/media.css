@@ -1,5 +1,13 @@
+/*
+@media screen and (min-width: 1400px){
+    nav{
+      width: 1365px;
+    }
+}
+*/
+
 @media screen and (max-width: 1200px) {
-    #student-wrapper{
+    .student-wrapper{
       width: 90%;
     }
 }
@@ -73,10 +81,8 @@
 }
 
 @media screen and (max-width: 640px){
-  /**{background:green;}*/
-    /*ul.students li{
-      width:100%;
-    }*/
+
+
     nav{
       /*display: flex;
       justify-content: space-between;*/
@@ -89,7 +95,6 @@
       }
 
       nav ul#nav-links{
-        /*display: none;*/
         justify-content: space-around;
       }
 
@@ -100,20 +105,10 @@
           margin-bottom: 20px;
         }
 
-
-        /*a#logo{
-          background-image: url("../images/logo_small.png");
-          width:43px;
-          height: 54px;
-          margin: 0 auto;
-        }*/
-
-        /*a#menu_mobile{
-          display: flex;
-          justify-content: flex-end;
-          align-items: center;
-          margin-right: 20px;
-        }*/
+    header.landing{
+      height: 40vh;
+      margin-top: 60px;
+    }
 
     .videos{
       display: none;
@@ -140,6 +135,19 @@
       flex-direction: column;
       align-items: center;
     }
+
+    .boxes.buttons{
+      flex-direction: row;
+    }
+
+        .boxes.buttons li{
+          margin: 10px 10px 20px;
+        }
+
+        .boxes.buttons a{
+          width: 100px;
+          height: 60px;
+        }
 
       .boxes li{
         margin-bottom: 20px;
