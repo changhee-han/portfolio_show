@@ -167,9 +167,11 @@ em{
     display: flex;
     flex-direction: column;
     justify-content: center;*/
+    padding: 50px;
     margin-top: 105px;
     height: 80vh;
     color: #FF8300;
+    background: #242528;
   }
 
     hgroup{
@@ -307,10 +309,8 @@ em{
         ul.students li{
           display: inline-block;
           position: relative;
-          width: 250px;
-          margin-left: 5px;
-          margin-right: 5px;
-          margin-bottom: 50px;
+          width: 200px;
+	  margin: 0em 1em 2em 2em;
         }
 
           ul.students li a{
@@ -577,3 +577,6 @@ body.student{
 .displayProfile {
     display: block;
 }
+
+/*Chloe: I made changes to the padding and background of "header.landing" +
+width and margin of "ul.students li"*/
