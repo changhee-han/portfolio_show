@@ -121,7 +121,7 @@
       /*border: 1px solid green;*/
     }
     ul.job-groups{
-      flex-direction: column;
+      /*flex-direction: column;*/
       width: 80%;
     }
       ul.job-groups li{
