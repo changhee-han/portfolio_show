@@ -34,7 +34,7 @@ body{
   background: #231F20; /*black*/
 }
 
-h1{font-size: 4.2rem;}
+h1{font-size: 3.2rem;}
 
 h2{font-size: 2.6rem;}
 
@@ -78,7 +78,7 @@ em{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 105px;
+    height: /*105px;*/ 70px; /*Could someone upload a smaller version of the logo?*/
     background: #231F20; /*black*/
     transition: background 1s;
   }
@@ -171,11 +171,10 @@ em{
     margin-top: 105px;
     height: 80vh;
     color: #FF8300;
-    background: #242528;
   }
 
     hgroup{
-      background-color: #242528;
+      /*background-color: #242528;*/
       width: 100%;
       height: 100%;
       padding: 25px;
@@ -577,6 +576,3 @@ body.student{
 .displayProfile {
     display: block;
 }
-
-/*Chloe: I made changes to the padding and background of "header.landing" +
-width and margin of "ul.students li"*/
