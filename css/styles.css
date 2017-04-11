@@ -437,6 +437,8 @@ body.student{
 
       #work{
         /*border: 1px solid orange;*/
+	background: url('../images/macbook.png')no-repeat;
+	background-size: 100%;
         width: 100%;
         margin: 0 auto 20px;
       }
@@ -482,6 +484,7 @@ body.student{
         width: 470px;
       }
           #work img{
+            margin-top: 1.6em;
             width: 100%;
             height: auto;
           }
@@ -491,6 +494,7 @@ body.student{
             text-decoration: none;
             color: #000;
           }
+	#work h4 { margin-top: 3em; }
 
 /* ===== Student bio styles =====*/
 
