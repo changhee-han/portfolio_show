@@ -68,8 +68,8 @@ for($i = 0; $i <$dataLength; $i++ ){
                     </div>
                 </div>
                 <ul class="boxes buttons">
-                    <li><a href="javascript:changeProfileDisplay(\''.$data[$previous]['ID'].'\')">Previous</a></li>
-                    <li><a href="javascript:changeProfileDisplay(\''.$data[$next]['ID'].'\')">Next</a></li>
+                    <li><a href="javascript:changeProfileDisplay(\''.$data[$previous]['ID'].'\')">&#8592;&nbsp;Previous</a></li>
+                    <li><a href="javascript:changeProfileDisplay(\''.$data[$next]['ID'].'\')">Next&nbsp&#8594;</a></li>
                 </ul>
              </div>';
 
