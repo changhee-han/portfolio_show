@@ -447,9 +447,12 @@ body.student{
         margin: 0 auto 20px;
       }
 
-        #work img{
-            margin-bottom: 10px;
-        }
+	#work img{
+	    	margin-bottom: 10px;
+		margin-top: 1.2em;
+		width:77%;
+		height: auto;
+	}
 
       h3.title{
         margin-bottom: 30px;
