@@ -386,13 +386,17 @@ em{
             display: block;
             box-sizing: border-box;
             text-decoration: none;
-            color: #fff;
+		font-size: 1.3em; font-weight: 800;
+            color: #f7931e;
             width: 140px;
             height: 60px;
             padding: 20px;
             text-align: center;
-            background: #FBB03B;
+		  /*background: #FBB03B;*/
           }
+	.boxes a:hover {
+		text-decoration: underline;
+	}
 
     #map{
       width: 100%;
