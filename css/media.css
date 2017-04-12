@@ -12,6 +12,10 @@
     }
 }
 
+@media screen and (max-width: 1105px) {
+    #work img { margin-top: 1.1em; }
+}
+
 @media screen and (max-width: 1090px){
   ul.students{
     width: 782px;
