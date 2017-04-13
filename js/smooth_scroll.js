@@ -24,18 +24,20 @@ $(document).ready(function(){
       var about = $("#about").offset().top -50;
       if ($(window).scrollTop() > about) {
           $('.menu').addClass('clear');
+          $('.hide-logo-text').addClass('show-logo');
       } else {
           $('.menu').removeClass('clear');
+          $('.hide-logo-text').removeClass('show-logo');
       }
     });
 });//End ready function
 
 
-//Changhee added  
+//Changhee added
 
 function changeProfileDisplay (id){
     $('.studentProfile').hide();
     $('#'+id).show();
-    
-    
+
+
 }

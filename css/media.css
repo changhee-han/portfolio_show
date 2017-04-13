@@ -13,8 +13,8 @@
 }
 
 @media screen and (max-width: 1105px) {
-    #work img { margin-top: 1.1em; }
-}
+  #work img { margin-top: 1.1em; }
+ }
 
 @media screen and (max-width: 1090px){
   ul.students{
@@ -125,12 +125,25 @@
       /*border: 1px solid green;*/
     }
     ul.job-groups{
-      /*flex-direction: column;*/
+      flex-direction: column; /*Sorry but I changed it back to column because the row wouldn't adjust on my phone-Justice*/
       width: 80%;
+      align-items: center;
+      margin-bottom: 30px; 
+      /*width: 100%;
+      display: inline-block;
+      text-align: center;*/
     }
       ul.job-groups li{
+        /*display: inline-block;*/
         margin-bottom: 30px;
+        /*width: 170px;*/
+        /*text-align: center;*/
       }
+
+        /*ul.jobs-groups label{
+          padding: 0 10px 5px;
+        }*/
+
     ul.students{
       width: 100%;
     }
@@ -177,4 +190,8 @@
         /*margin-left: 20px;*/
         align-self: flex-start;
       }
+}
+
+@media screen and (max-width:520px) {
+  #work img { margin-top: 0.7em; }
 }
