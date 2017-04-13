@@ -134,10 +134,19 @@ em{
 
         a#logo-type{
           /*font-weight: normal;*/
-          background-image: url("../images/logo_text.png");
+          /*background-image: url("../images/logo_text.png");
           width: 408px;
-          height: 145px;
+          height: 145px;*/
         }
+
+          nav h1{ /*I got the font to show on other browsers - Justice*/
+            font-family: continuo, sans-serif;
+            color: #F7931E; /*orange*/
+            font-size: 4.2rem;
+            font-style: normal;
+            font-weight: 400;
+            margin-bottom: 0;
+          }
 
         a#menu_mobile{
           display: none;
