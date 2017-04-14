@@ -6,6 +6,12 @@
 }
 */
 
+@media screen and (min-width: 1920px) {
+    .student-wrapper{
+      margin-top: 15em;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .student-wrapper{
       width: 90%;
@@ -128,7 +134,7 @@
       flex-direction: column; /*Sorry but I changed it back to column because the row wouldn't adjust on my phone-Justice*/
       width: 80%;
       align-items: center;
-      margin-bottom: 30px; 
+      margin-bottom: 30px;
       /*width: 100%;
       display: inline-block;
       text-align: center;*/
