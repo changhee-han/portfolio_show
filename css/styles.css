@@ -24,7 +24,7 @@
   font-weight: normal;
 }
 
-*{box-sizing: border-box;}
+*{box-sizing: border-box; -webkit-appearance: none;}
 html{font-size: 10px;}
 
 body{
@@ -105,6 +105,19 @@ em{
         margin-left: 30px;
       }
 
+      nav ul.nav-logos li:nth-child(2){
+        margin-left: 10px;
+        transition: opacity 1s;
+      }
+
+        nav ul.nav-logos li.hide-logo-text{
+          opacity: 0;
+        }
+
+        li.show-logo{
+          opacity: 1!important;
+        }
+
         nav ul li a{
           display: block;
           text-decoration: none;
@@ -113,15 +126,27 @@ em{
         }
 
         a#logo{
-          background-image: url("../images/logo.png");
-          width:57px;
-          height: 72px;
+          background-image: url("../images/logo_smaller.png");
+          width: 32px;
+          height: 40px;
           margin: 0 auto;
         }
 
         a#logo-type{
-          font-weight: normal;
+          /*font-weight: normal;*/
+          background-image: url("../images/logo_text.png");
+          width: 408px;
+          height: 145px;
         }
+
+          /*nav h1{ 
+            font-family: continuo, sans-serif;
+            color: #F7931E;
+            font-size: 4.2rem;
+            font-style: normal;
+            font-weight: 400;
+            margin-bottom: 0;
+          }*/
 
         a#menu_mobile{
           display: none;
@@ -134,11 +159,11 @@ em{
     nav ul#nav-links{
       justify-content: flex-end;
     }
-        nav h1{
+        /*nav h1{
           font-family:Continuo;
-          color: #F7931E; /*orange*/
+          color: #F7931E;
           margin-bottom: 0;
-        }
+        }*/
 
       nav ul#nav-links li{
         margin-left: 0;
@@ -386,17 +411,31 @@ em{
             display: block;
             box-sizing: border-box;
             text-decoration: none;
-		font-size: 1.3em; font-weight: 800;
+            /*color: #fff;*/
+            font-size: 1.3em;
+            font-weight: 800;
             color: #f7931e;
             width: 140px;
             height: 60px;
-            padding: 20px;
+            padding: 21px;
             text-align: center;
-		  /*background: #FBB03B;*/
+            /*background: #FBB03B;*/
           }
-	.boxes a:hover {
-		text-decoration: underline;
-	}
+
+          .boxes a:hover{
+            text-decoration: underline;
+          }
+
+          .boxes.rsvp a{
+            font-size: 11pt;
+            font-weight: 600;
+            color: #fff;
+            background: #FBB03B;
+          }
+
+          .boxes.rsvp a:hover{
+            text-decoration: none;
+          }
 
     #map{
       width: 100%;
@@ -412,6 +451,11 @@ em{
       height: 100px;
       color: #939292; /*grey*/
       background: #231F20;
+    }
+
+    footer.student-footer{
+      color: #000;
+      background-color: #fff;
     }
 
 /* ===== Student information page styles =====*/
@@ -434,6 +478,14 @@ body.student{
         margin-right: 50px;
       }
 
+      #info img{
+        width: 250px;
+        height: auto;
+        max-height: 350px;
+        margin-bottom: 60px;
+        display: block;
+      }
+
       #info p {
         letter-spacing: 1px;
         line-height: 20px;
@@ -441,29 +493,34 @@ body.student{
 
       #work{
         /*border: 1px solid orange;*/
-	background: url('../images/macbook.png')no-repeat;
-	background-size: 100%;
+        background: url('../images/macbook.png')no-repeat;
+  	    background-size: 100%;
         width: 100%;
         margin: 0 auto 20px;
       }
 
-	#work img{
-	    	margin-bottom: 10px;
-		margin-top: 1.2em;
-		width:77%;
-		height: auto;
-	}
+        /*#work img{
+          margin-top: 1.6em;
+          width: 100%;
+          height: auto;
+        }*/
+
+        #work img{
+   	    	margin-bottom: 10px;
+   	      margin-top: 1.2em;
+   		    width:77%;
+   		    height: auto;
+ 	      }
+
+        #work a{
+          display: block;
+          text-align: center;
+          text-decoration: none;
+          color: #000;
+        }
 
       h3.title{
         margin-bottom: 30px;
-      }
-
-      #info img{
-        width: 250px;
-        height: auto;
-        max-height: 350px;
-        margin-bottom: 60px;
-        display: block;
       }
 
         .pic-quote{
@@ -490,18 +547,8 @@ body.student{
       #student-group p{
         width: 470px;
       }
-          #work img{
-            margin-top: 1.6em;
-            width: 100%;
-            height: auto;
-          }
-          #work a{
-            display: block;
-            text-align: center;
-            text-decoration: none;
-            color: #000;
-          }
-	#work h4 { margin-top: 3em; }
+
+      #work h4 { margin-top: 3em; }
 
 /* ===== Student bio styles =====*/
 
